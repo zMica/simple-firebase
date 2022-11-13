@@ -1,0 +1,35 @@
+{
+  "name": "simple-firebase",
+  "version": "0.0.1",
+  "description": "A simple wrapper of Firebase database",
+  "main": "dist/index.js",
+  "author": "zMica",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "jest": "jest --config jestconfig.json",
+    "lint": "eslint --fix"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "firebase",
+    "wrapper",
+    "database",
+    "firebase-wrapper",
+    "db"
+  ],
+  "dependencies": {
+    "firebase": "^9.14.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
+  }
+}
