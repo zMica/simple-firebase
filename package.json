@@ -1,6 +1,6 @@
 {
   "name": "simple-firebase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple wrapper of Firebase database",
   "main": "dist/index.js",
   "author": "zMica",
@@ -9,6 +9,9 @@
     "build": "tsc --project tsconfig.json",
     "jest": "jest --config jestconfig.json",
     "lint": "eslint --fix"
+  },
+  "engines": {
+    "node": ">=16.6.0"
   },
   "files": [
     "dist/*"
