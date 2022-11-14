@@ -5,6 +5,7 @@
         "moduleResolution": "node",
         "target": "ESNext",
         "outDir": "./dist",
+        "allowJs": true,
         "sourceMap": false,
         "esModuleInterop": true,
         "noUnusedLocals": true,

@@ -1,4 +1,3 @@
-jestconfig.json
 node_modules/
 src/tests
 yarn.lock

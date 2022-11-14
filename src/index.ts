@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Database, getDatabase, ref, set, child, get, remove, update } from 'firebase/database';
+import { Database, getDatabase as GetDatabase, ref, set, child, get, remove, update } from 'firebase/database';
 import { initializeApp as Init } from 'firebase/app';
 
 type Options = {
@@ -15,11 +15,12 @@ type Options = {
 
 function Create(options: Options) {
     try {
-        if(global.connected) return getDatabase();
+        if(global.connected) return GetDatabase();
 
         global.connected = true;
+        global.options = options;
         Init(options);
-        return getDatabase();
+        return GetDatabase();
     } catch(error) {
         if(error instanceof Error) {
             throw new Error(error.stack);
@@ -151,4 +152,7 @@ export class Firebase {
     }
 }
 
-export { getDatabase };
+export function getDatabase() {
+    if(!global.options) return new Error('The database is not connected');
+    return new Firebase(global.options);
+}
